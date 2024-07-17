@@ -132,6 +132,14 @@
                         </li>
                     </ul>
                 </li>
+                <li class="nav-item">
+                    <a href="?pg=setting" class="nav-link">
+                        <i class="nav-icon far fa-image"></i>
+                        <p>
+                           Setting website
+                        </p>
+                    </a>
+                </li>
                 <li class="nav-header">EXAMPLES</li>
                 <li class="nav-item">
                     <a href="../calendar.html" class="nav-link">
@@ -142,14 +150,7 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="../gallery.html" class="nav-link">
-                        <i class="nav-icon far fa-image"></i>
-                        <p>
-                            Gallery
-                        </p>
-                    </a>
-                </li>
+
                 <li class="nav-item">
                     <a href="../kanban.html" class="nav-link">
                         <i class="nav-icon fas fa-columns"></i>
