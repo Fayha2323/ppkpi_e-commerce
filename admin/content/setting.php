@@ -8,7 +8,7 @@ if (isset($_POST['simpan'])) {
     $fb_web = $_POST['fb_web'];
     $linkedIn = $_POST['linkedIn'];
 
-    $querySetting = mysqli_query($koneksi, "SELECT * FROM setting ORDER BY id DESC");
+    $querySetting = mysqli_query($koneksi, "UPDATE setting SET email_website = '$email_website', no_telp_website = '$no_telp_website', alamat_website = '$alamat_website', ig = '$ig', twitter = '$twitter', fb = '$fb', linkedin = '$linkedin' WHERE id = '1'");
     if (mysqli_num_rows($querySetting) > 0) {
         //updated    
     } else {
@@ -21,11 +21,11 @@ VALUES ('$email_web', '$hp_web','$alamat','$ig_web','$x_web','$fb_web','$linkedI
 <form action="" method="post" enctype="multipart/form-data">
     <div class="mb-3">
         <label for="">Email Web</label>
-        <input type="email" class="form-control" name="email_web" placeholder="Email Web">
+        <input value="<?= $rowSetting['email_web'] ?>" type="email" class="form-control" name="email_web" placeholder="Email Web">
     </div>
     <div class="mb-3">
         <label for="">No.Hp Web</label>
-        <input type="text" class="form-control" name="hp_web" placeholder="No_hp Web">
+        <input value="<?= $rowSetting['hp_web'] ?>" name="hp_web" placeholder="No_hp Web">
     </div>
     <div class="mb-3">
         <label for="">Alamat Website</label>

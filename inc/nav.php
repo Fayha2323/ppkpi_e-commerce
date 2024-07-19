@@ -1,3 +1,18 @@
+<?php
+// include 'admin/function/get_data.php';
+
+// Assuming $_SESSION['id_member'] is properly initialized elsewhere
+$id_member = $_SESSION['id_member'];
+// Query to fetch member data
+$query = mysqli_query($koneksi, "SELECT * FROM member WHERE id = '$id_member'");
+
+// Fetch associative array of data
+$data = mysqli_fetch_assoc($query);
+
+?>
+
+
+
 <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
 
     <div class="container">
@@ -20,7 +35,8 @@
             </ul>
 
             <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-                <li><a class="nav-link" href="#"><img src="aset/fur/images/user.svg"></a></li>
+                <li><a class="nav-link" href="?pg=login-member"><img src="aset/fur/images/user.svg"><?= $data['nama_lengkap'] ?>
+                    </a>
                 <li><a class="nav-link" href="cart.html"><img src="aset/fur/images/cart.svg"></a></li>
             </ul>
         </div>

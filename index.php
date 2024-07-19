@@ -1,13 +1,5 @@
-
-<!-- /*
-* Bootstrap 5
-* Template Name: Furni
-* Template Author: Untree.co
-* Template URI: https://untree.co/
-* License: https://creativecommons.org/licenses/by/3.0/
-*/ -->
 <?php
-
+session_start();
 // ob_clean();
 include 'admin/koneksi/koneksi.php';
 ?>
